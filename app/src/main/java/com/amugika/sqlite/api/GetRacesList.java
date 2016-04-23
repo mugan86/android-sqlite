@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.amugika.sqlite.MainActivity;
-import com.amugika.sqlite.Request;
 import com.amugika.sqlite.adapter.RaceAdapter;
 import com.amugika.sqlite.db.RaceDBHelper;
 import com.amugika.sqlite.model.Race;
