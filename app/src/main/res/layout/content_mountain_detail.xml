@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10sp"
+    android:layout_marginTop="?attr/actionBarSize">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/mountain_nameTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:text="Aizkorri"/>
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/altitudeTextView"
+                    android:layout_alignParentRight="true"
+                    android:text="2473m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/mountain_iconImageView"
+                    android:layout_width="35sp"
+                    android:layout_height="35sp"
+                    android:src="@drawable/mountain_blue"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:layout_width="match_parent"
+            android:layout_marginTop="8sp"
+            android:layout_height="1sp"
+            android:background="@android:color/black" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:id="@+id/location_nameTextView"
+                    android:layout_marginTop="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textSize="16sp"
+                    android:text="Aizkorri"/>
+                <TextView android:id="@+id/range_nameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textSize="16sp"
+                    android:text="Aizkorri"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/one_hundred_mountainsImageView"
+                        android:layout_width="25sp"
+                        android:layout_height="32sp"
+                        android:layout_marginRight="5sp"
+                        android:src="@drawable/ehunmendiak"/>
+                    <ImageView
+                        android:visibility="visible"
+                        android:id="@+id/children_availableImageView"
+                        android:layout_width="25sp"
+                        android:layout_height="32sp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/umeentzategoki"/>
+                </LinearLayout>
+                <RatingBar
+                    android:layout_marginTop="5sp"
+                    android:id="@+id/ratingBar"
+                    android:numStars="5"
+                    android:rating="3.4"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/climbButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/i_climb_mountain"
+                android:layout_marginRight="10sp"
+                 style="@style/Widget.AppCompat.Button.Colored" />
+            <Button android:id="@+id/commentButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:text="@string/i_iruzkina_mountain"
+                android:layout_marginRight="10sp"
+                 style="@style/Widget.AppCompat.Button.Colored" />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginTop="8sp"
+                android:src="@drawable/ic_room_black_48dp"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:padding="8sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance_locationTextView"
+                android:text=""
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_map_black_48dp"
+                android:layout_marginTop="8sp"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:padding="8sp"
+                android:layout_height="wrap_content"
+                android:linksClickable="true"
+                style="@style/dashboard_button"
+                android:id="@+id/goToGoogleMapsTextView"
+                android:text="Ikusi mapan"
+                />
+        </LinearLayout>
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:id="@+id/detailImageView"
+            android:padding="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/upload_imageButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_image_button_lbl"
+            android:layout_marginRight="10sp"
+            android:layout_gravity="right" style="@style/Widget.AppCompat.Button.Colored" />
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:textSize="16sp"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

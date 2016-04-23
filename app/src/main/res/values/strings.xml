@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Races SQLite</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="other_options_title_menu">Aukera gehiago</string>
+    <string name="action_settings">Settings</string>
+
+    <!--activity_login-->
+
+    <string name = "start_session_mendiak">Hasi saioa</string>
+
+    <!--Activity Mountains details-->
+
+    <string name="mendizerra">mendikatea</string>
+    <string name="splash_text">"Han goitik itsasoa ikusten da"</string>
+    <string name="upload_image_button_lbl">Igo irudia</string>
+    <string name="i_climb_mountain">Igo dut!</string>
+    <string name="i_iruzkina_mountain">Idatzi iruzkina</string>
+    <string name="download_data_progress">"Datuak bidaltzen..."</string>
+    <string name="image_no_take_correctly">Irudia ez da zuzen hartu, saiatu gehitzen berriro mesedez.</string>
+    <string name="image_upload_successfully">"Irudia zuzen igo da. Eskerrik asko!"</string>
+    <string name="image_upload_no_correct">"Irudia oker igo da. Saiatu berriro mesedez."</string>
+    <string name="no_granted_access">Ez da eskatutako baimena eman.</string>
+    <string name = "data_correct_send">Datuak zuzen bidalita!</string>
+    <string name = "data_no_correct_send">Datuak ez dira zuzen bidali, saiatu berriro!</string>
+
+    <!-- Camera / Directory and Dialogs texts options-->
+    <string name = "title_select_option_image">"Aukeratu irudia kamera edo gailutik"</string>
+    <string name = "camera_label">Argazki kamera</string>
+    <string name = "device_label">Gailuko irudiak</string>
+    <string name = "send_label">Bidali</string>
+    <string name = "cancel_label">Ezeztatu</string>
+
+    <!--Navigation menu strings-->
+    <string name="title_info_app">Info</string>
+    <string name="title_config_app">Ezarpenak</string>
+    <string name="title_share_app">Elkarbanatu</string>
+    <string name="title_mapa_app">Mapa</string>
+    <string name="title_eh_mendi_app">Mendiak</string>
+    <string name="title_my_mendi_app">Nire Mendiak</string>
+    <string name="title_activity_mendiak_maps">EH-ko mendien mapa</string>
+    <string name="title_activity_ranking">Rankinak</string>
+    <string name="title_activity_my_user_stats">Nire Estatistikak</string>
+    <string name="title_search_app">Bilatu zerrendan</string>
+    <string name="title_activity_info">Informazioa</string>
+
+    <!--Google Analytics Text to register TrackView-->
+    <string name = "ga_login_btn_click">(KLIK) Saioa hasi botoia</string>
+    <string name = "ga_search_action_bar_click">(KLIK) Mendiak Filtratu Bilatzailearekin</string>
+    <string name = "ga_filt_mnu_action_bar_click">(KLIK) Filtroa aplikatzeko aukera</string>
+    <string name = "ga_filt_by_altitude_mnu_action_bar_click">(KLIK) Ordenatu altueraren arabera</string>
+    <string name = "ga_filt_by_importance_mnu_action_bar_click">(KLIK) Ordenatu garrantziaren arabera</string>
+    <string name = "ga_share_general_mnu_action_bar_click">(KLIK) Partekatu orokorra</string>
+    <string name = "ga_share_select_item_mnu_action_bar_click">(KLIK) Parekatu: </string>
+    <string name = "ga_igo_dut_btn_click">(KLIK) Igo dut mendia: </string>
+    <string name = "ga_igo_irudia_btn_click">(KLIK) Igo irudia: </string>
+    <string name = "ga_igo_irudia_kamera_btn_click">(KLIK) Igo irudia (Kamera): </string>
+    <string name = "ga_igo_irudia_galeria_btn_click">(KLIK) Igo irudia (Galeria): </string>
+    <string name = "ga_igo_irudia_cancel_btn_click">(KLIK) Igo irudia (Ezeztatu): </string>
+    <string name = "ga_share_navigation_mnu_btn_click">(KLIK) Partekatu orokorra </string>
+    <string name = "ga_more_info_navigation_mnu_btn_click">(KLIK) Informazio gehiago erakusteko </string>
+    <string name = "ga_config_navigation_mnu_btn_click">(KLIK) Aplikazioaren ezarpenak (Konfigurazioa) </string>
+
+
+    <string name = "ga_start_app_activity">(Activity) Aplikazioaren hasiera: </string>
+    <string name = "ga_mountain_details_activity">(Activity) Aukeratutako mendiaren xehetasunak: </string>
+    <string name = "ga_all_mountains_activity">(Activity) Mendi zerrenda osoa</string>
+    <string name = "ga_my_stats_activity">(Activity) Nire estatistikak</string>
+    <string name = "ga_ranking_activity">(Activity) Ranking orokorrak</string>
+    <string name = "ga_maps_activity">(Activity) Ranking orokorrak</string>
+    <string name = "ga_my_climbs_activity">(Activity) Nire mendiak</string>
+    <string name = "ga_general_info_activity">(Activity) Informazion orokorra</string>
+
+    <!--Menus strings-->
+
+    <string name = "order_by_altitude_str">Altueran ordenatu</string>
+    <string name = "order_by_value_str">Puntuazioan ordenatu</string>
+    <string name = "order_by_distantzia_str">Distantzian ordenatu</string>
+
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idatzi zure iruzkina : "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <requestFocus />
+    </EditText>
+    <LinearLayout
+        android:layout_marginTop="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/time_textTextView"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/climb_hourTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ordua aukeratu"/>
+            <ImageButton android:drawable="@android:drawable/ic_menu_edit"
+                android:layout_alignParentRight="true"
+                android:id="@+id/climb_hourTimePicker"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:background="@color/Transparent"
+                android:src="@android:drawable/ic_menu_edit" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/data_textTextView"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/climb_dataDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data aukeratu"/>
+            <ImageButton android:drawable="@android:drawable/ic_menu_edit"
+                android:layout_alignParentRight="true"
+                android:id="@+id/climb_dataDatePicker"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:background="@color/Transparent"
+                android:src="@android:drawable/ic_menu_edit" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/zenbat_gustatuTextView"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zenbat gustatu zaizu? "
+            android:layout_gravity="center_horizontal"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:id="@+id/mountain_points_by_userRatingBar"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

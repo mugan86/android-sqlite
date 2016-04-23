@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:title="@string/title_search_app"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="collapseActionView|always"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="@string/title_share_app"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/filter_option"
+        android:title="Filtratu"
+        android:icon="@drawable/ic_filter"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/order_by_altitude"
+                android:title="@string/order_by_altitude_str" />
+            <item
+                android:id="@+id/order_by_importance"
+                android:title="@string/order_by_value_str" />
+            <item
+                android:id="@+id/order_by_distance"
+                android:title="@string/order_by_distantzia_str" />
+        </menu>
+    </item>
+
+</menu>

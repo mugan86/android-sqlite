@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_eh_mountains"
+            android:icon="@drawable/ic_list"
+            android:title="@string/title_eh_mendi_app" />
+        <item
+            android:id="@+id/nav_my_mountains"
+            android:icon="@drawable/ic_list"
+            android:title="@string/title_my_mendi_app" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map"
+            android:title="@string/title_mapa_app" />
+        <item
+            android:id="@+id/nav_mystats"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/title_activity_my_user_stats" />
+        <item
+            android:id="@+id/nav_ranking"
+            android:icon="@drawable/ic_poll"
+            android:title="@string/title_activity_ranking" />
+    </group>
+
+    <item android:title="@string/other_options_title_menu">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/title_share_app" />
+            <item
+                android:id="@+id/nav_config"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/title_config_app" />
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_menu_info"
+                android:title="@string/title_info_app" />
+        </menu>
+    </item>
+
+</menu>
