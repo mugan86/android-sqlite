@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PlacesGalleryActivity"
+            android:theme="@style/AppTheme"
+            android:label="Gallery" />
+        <activity android:name=".DetailsActivity"
+            android:theme="@style/AppTheme"
+            android:label="Gallery" />
     </application>
 
 </manifest>

@@ -62,4 +62,28 @@ public class Constants {
 
     public static final String COUNT_ROW_FROM = "select count(*) from ";
     public static final String TEXT_TYPE = " TEXT, ";
+
+    public static final String [] photos = {
+            "http://mw2.google.com/mw-panoramio/photos/medium/9363990.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/522084.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/1289207.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/46817885.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/532693.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/72997452.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/25514.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/54671525.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/6126294.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/97671.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/10574161.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/57823.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/27932.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/204924.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/72223854.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/48619132.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/45214668.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/346269.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/233619.jpg",
+            "http://mw2.google.com/mw-panoramio/photos/medium/1578881.jpg"
+
+    };
 }
