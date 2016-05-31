@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amugika.sqlite.R;
 import com.amugika.sqlite.model.Race;
@@ -40,6 +42,7 @@ public class RaceAdapter
         private RatingBar ratingBar;
         private ImageView one_hundred_mountainsImageView;
         private ImageView for_children_mountainsImageView;
+        private ImageButton action_insideRecyclerViewItemImageButton;
 
         public RacesViewHolder(View itemView)
         {
@@ -54,9 +57,10 @@ public class RaceAdapter
             ratingBar = (RatingBar) itemView.findViewById(R.id.ratingBar);
             one_hundred_mountainsImageView = (ImageView) itemView.findViewById(R.id.one_hundred_mountainsImageView);
             for_children_mountainsImageView = (ImageView) itemView.findViewById(R.id.for_children_mountainsImageView);
+            action_insideRecyclerViewItemImageButton = (ImageButton) itemView.findViewById(R.id.action_insideRecyclerViewItemImageButton);
         }
 
-        public void bindRace(Race race) {
+        public void bindRace(final Race race) {
             txtTitulo.setText(race.getRace_name());
             txtSubtitulo.setText(race.getRace_data());
             //"https://d30y9cdsu7xlg0.cloudfront.net/png/16025-200.png"
@@ -75,6 +79,13 @@ public class RaceAdapter
             one_hundred_mountainsImageView.setVisibility(View.GONE);
             for_children_mountainsImageView.setVisibility(View.GONE);
             prominencetextView.setVisibility(View.GONE);
+
+            action_insideRecyclerViewItemImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(activity, "Action inside row!!!" + race.getRace_name(), Toast.LENGTH_LONG).show();
+                }
+            });
 
 
         }
