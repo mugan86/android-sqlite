@@ -18,7 +18,7 @@
     <item
         android:id="@+id/filter_option"
         android:title="Filtratu"
-        android:icon="@drawable/ic_filter"
+        android:icon="@drawable/ic_panorama_white_24dp"
         app:showAsAction="always">
         <menu>
             <item
