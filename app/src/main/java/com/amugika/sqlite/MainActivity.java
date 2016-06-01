@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.amugika.sqlite.adapter.RaceAdapter;
 import com.amugika.sqlite.api.GetRaceListFromSQLite;
@@ -70,6 +72,31 @@ public class MainActivity extends AppCompatActivity{
         }
 
 
+    }
+
+    // Display anchored popup menu based on view selected
+    public void showFilterPopup(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        // Inflate the menu from xml
+        popup.getMenuInflater().inflate(R.menu.popupmenu, popup.getMenu());
+        // Setup menu item selection
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.menu_keyword:
+                        Toast.makeText(MainActivity.this, "Keyword!", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.menu_popularity:
+                        Toast.makeText(MainActivity.this, "Popularity!", Toast.LENGTH_SHORT).show();
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+        // Handle dismissal with: popup.setOnDismissListener(...);
+        // Show the menu
+        popup.show();
     }
 
     public void addAdapterConfig(RaceAdapter adapter)
