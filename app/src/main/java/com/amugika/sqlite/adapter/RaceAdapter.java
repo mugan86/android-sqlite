@@ -11,6 +11,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amugika.sqlite.MainActivity;
 import com.amugika.sqlite.R;
 import com.amugika.sqlite.model.Race;
 import com.squareup.picasso.Picasso;
@@ -84,6 +85,8 @@ public class RaceAdapter
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(activity, "Action inside row!!!" + race.getRace_name(), Toast.LENGTH_LONG).show();
+                    ((MainActivity)activity).showFilterPopup(v);
+
                 }
             });
 
