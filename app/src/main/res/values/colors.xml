@@ -190,5 +190,13 @@
     <color name= "altuera2">#214f02</color>
     <color name= "altuera1">#631a06</color>
 
+    <!--Google Play Reviews valoration lines color-->
+
+    <color name = "five_points_g_play">#8cc24a</color>
+    <color name = "four_points_g_play">#cbd938</color>
+    <color name = "three_points_g_play">#ffe83b</color>
+    <color name = "two_points_g_play">#ffb133</color>
+    <color name = "one_points_g_play">#ff8a5c</color>
+
 
 </resources>
