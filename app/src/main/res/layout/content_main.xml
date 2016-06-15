@@ -8,8 +8,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".activities.MainActivity"
     tools:showIn="@layout/app_bar_main">
+    <include layout="@layout/google_play_valoration" />
     <TextView
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/ratingBarsValorations"
+
         android:id="@+id/search_infoTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
