@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_alignParentTop="true"
+    android:id="@+id/ratingBarsValorations"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_marginTop="-5sp"
+        android:id="@+id/pointsLinearLayout"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="70sp">
+            <TextView
+                android:id="@+id/mountain_valorationTextView"
+                android:textSize="48sp"
+                android:padding="5sp"
+                android:text="4.8"
+                android:layout_marginTop="5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RatingBar
+                android:clickable="false"
+                android:layout_above="@+id/icon_personImageView"
+                android:layout_toRightOf="@+id/mountain_valorationTextView"
+                style="?android:attr/ratingBarStyleSmall"
+                android:id="@+id/globalPointsRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/valoration_avgTotalTextView"
+
+                android:layout_toRightOf="@+id/mountain_valorationTextView"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5sp"
+                android:padding="5sp"
+                android:text="12"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="-5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginBottom="5sp"
+                android:id="@+id/icon_personImageView"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/valoration_avgTotalTextView"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:padding="5sp"
+                android:text="12"
+                android:layout_marginTop="-5sp"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/ic_person_black_24dp"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20sp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingRight="5sp"
+            android:layout_weight="35">
+            <RatingBar
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="15sp"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="5"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="15sp"
+            android:layout_weight="35">
+            <View
+                android:id="@+id/valoration_five_pointView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/five_points_g_play" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/five_points_countTextView"
+            android:paddingLeft="5sp"
+            android:paddingTop="-5sp"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:layout_marginTop="-1sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="-3sp"
+        android:layout_width="fill_parent"
+        android:layout_height="20sp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingRight="5sp"
+            android:layout_weight="35">
+            <RatingBar
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="4"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="15sp"
+            android:layout_weight="35">
+            <View
+                android:id="@+id/valoration_four_pointView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/four_points_g_play" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/four_points_countTextView"
+            android:paddingLeft="5sp"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:layout_marginTop="-1sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="-3sp"
+        android:layout_width="fill_parent"
+        android:layout_height="20sp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingRight="5sp"
+            android:layout_weight="35">
+            <RatingBar
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="3"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="15sp"
+            android:layout_weight="35">
+            <View
+                android:id="@+id/valoration_three_pointView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/three_points_g_play" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/three_points_countTextView"
+            android:paddingLeft="5sp"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:layout_marginTop="-1sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="-3sp"
+        android:layout_width="fill_parent"
+        android:layout_height="20sp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingRight="5sp"
+            android:layout_weight="35">
+            <RatingBar
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="2"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="15sp"
+            android:layout_weight="35">
+            <View
+                android:id="@+id/valoration_two_pointView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/two_points_g_play" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/two_points_countTextView"
+            android:paddingLeft="5sp"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:layout_marginTop="-1sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20sp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginTop="-3sp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingRight="5sp"
+            android:layout_weight="35">
+            <RatingBar
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="1"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="15sp"
+            android:layout_weight="35">
+            <View
+                android:id="@+id/valoration_one_pointView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/one_points_g_play" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/one_points_countTextView"
+            android:paddingLeft="5sp"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:layout_marginTop="-1sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
