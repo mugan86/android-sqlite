@@ -9,8 +9,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amugika.sqlite.adapter.RaceAdapter;
@@ -18,6 +21,8 @@ import com.amugika.sqlite.api.GetRaceListFromSQLite;
 import com.amugika.sqlite.api.GetRacesList;
 import com.amugika.sqlite.db.RaceDBHelper;
 import com.amugika.sqlite.model.Race;
+import com.amugika.sqlite.model.Review;
+import com.amugika.sqlite.model.Valoration;
 import com.amugika.sqlite.utils.Actions;
 import com.amugika.sqlite.utils.DateTime;
 
@@ -31,7 +36,14 @@ public class MainActivity extends AppCompatActivity{
     private RecyclerView mountain_listRecyclerView;
     private ArrayList<Race> race_list;
     private RaceAdapter adapter;
-    private  LinearLayout splashLinearLayout, no_splashLinearLayout ;
+    private  LinearLayout splashLinearLayout, no_splashLinearLayout, ratingBarLinearLayout ;
+    private int [] valoration_colors;
+    private View valorations_views [];
+    private ArrayList<Valoration> valorations;
+    private Review review;
+    private TextView mountain_valorationTextView, valoration_avgTotalTextView, five_points_countTextView,
+            four_points_countTextView, three_points_countTextView, two_points_countTextView,
+            one_points_countTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +52,60 @@ public class MainActivity extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        valorations = new ArrayList<>();
+        Valoration val = new Valoration();
+        val.setValue((float) 2.5);
+        val.setText("");
+        valorations.add(val);
+        val.setValue((float) 4.5);
+        val.setText("");
+        valorations.add(val);
+        val.setValue((float) 1.0);
+        val.setText("");
+        valorations.add(val);
+        val.setValue((float) 2.5);
+        val.setText("");
+        valorations.add(val);
+        val.setValue((float) 2.0);
+        val.setText("");
+        valorations.add(val);
+        val.setValue((float) 4.0);
+        val.setText("");
+        valorations.add(val);
+        val.setValue((float) 0.5);
+        val.setText("");
+        valorations.add(val);
+
+        System.out.println("Valorations size: " + valorations.size());
+
+        review = new Review(valorations);
+
+        valorations_views = new View[5];
+        valorations_views[0] = findViewById(R.id.valoration_five_pointView);
+        valorations_views[1] = findViewById(R.id.valoration_four_pointView);
+        valorations_views[2] = findViewById(R.id.valoration_three_pointView);
+        valorations_views[3] = findViewById(R.id.valoration_two_pointView);
+        valorations_views[4] = findViewById(R.id.valoration_one_pointView);
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(50, ViewGroup.LayoutParams.WRAP_CONTENT);
+        valorations_views[0].setLayoutParams(params);
+
+        params = new RelativeLayout.LayoutParams(120, ViewGroup.LayoutParams.WRAP_CONTENT);
+        valorations_views[1].setLayoutParams(params);
+
         race_list = new ArrayList<>();
         mountain_listRecyclerView = (RecyclerView) findViewById(R.id.mountain_listRecyclerView);
         adapter = new RaceAdapter(race_list, MainActivity.this);
+
+        mountain_valorationTextView = (TextView) findViewById(R.id.mountain_valorationTextView);
+
+        valoration_avgTotalTextView = (TextView) findViewById(R.id.valoration_avgTotalTextView);
 
         mountain_listRecyclerView = (RecyclerView) findViewById(R.id.mountain_listRecyclerView);
 
         splashLinearLayout = (LinearLayout) findViewById(R.id.splashLinearLayout);
         no_splashLinearLayout = (LinearLayout) findViewById(R.id.no_splashLinearLayout);
+        ratingBarLinearLayout = (LinearLayout) findViewById(R.id.ratingBarsValorations);
 
 
         dbHelper = new RaceDBHelper(getBaseContext());
@@ -71,8 +129,25 @@ public class MainActivity extends AppCompatActivity{
             find();
         }
 
+        mountain_valorationTextView.setText(review.getAvg_points());
+        valoration_avgTotalTextView.setText(String.valueOf(review.getValorationsCount()));
+
+        int [][] valorations_count = review.getValuesCount();
+
+        five_points_countTextView = (TextView) findViewById(R.id.five_points_countTextView);
+        four_points_countTextView = (TextView) findViewById(R.id.four_points_countTextView);
+        three_points_countTextView = (TextView) findViewById(R.id.three_points_countTextView);
+        two_points_countTextView = (TextView) findViewById(R.id.two_points_countTextView);
+        one_points_countTextView = (TextView) findViewById(R.id.one_points_countTextView);
+
+        five_points_countTextView.setText(String.valueOf(valorations_count[0][1]));
+        four_points_countTextView.setText(String.valueOf(valorations_count[1][1]));
+        three_points_countTextView.setText(String.valueOf(valorations_count[2][1]));
+        two_points_countTextView.setText(String.valueOf(valorations_count[3][1]));
+        one_points_countTextView.setText(String.valueOf(valorations_count[4][1]));
 
     }
+
 
     // Display anchored popup menu based on view selected
     public void showFilterPopup(View v) {
