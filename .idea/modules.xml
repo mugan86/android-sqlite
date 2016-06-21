@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/android-sqlite.iml" filepath="$PROJECT_DIR$/android-sqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sqlite-android-example.iml" filepath="$PROJECT_DIR$/sqlite-android-example.iml" />
     </modules>
   </component>
 </project>

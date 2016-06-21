@@ -15,9 +15,9 @@ import com.amugika.sqlite.utils.Actions;
 
 import java.util.ArrayList;
 
-/**
+/***************************************
  * Created by anartzmugika on 31/5/16.
- */
+ ***************************************/
 public class PlacesGalleryActivity extends AppCompatActivity {
 
     private GridView gridView;
