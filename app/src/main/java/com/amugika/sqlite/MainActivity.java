@@ -23,6 +23,7 @@ import com.amugika.sqlite.db.RaceDBHelper;
 import com.amugika.sqlite.model.Race;
 import com.amugika.sqlite.model.Review;
 import com.amugika.sqlite.model.Valoration;
+import com.amugika.sqlite.preferences.SettingsActivity;
 import com.amugika.sqlite.utils.Actions;
 import com.amugika.sqlite.utils.DateTime;
 
@@ -160,6 +161,8 @@ public class MainActivity extends AppCompatActivity{
                 switch (item.getItemId()) {
                     case R.id.menu_keyword:
                         Toast.makeText(MainActivity.this, "Keyword!", Toast.LENGTH_SHORT).show();
+                        Intent SettingsActivityIntent = new Intent (MainActivity.this, SettingsActivity.class);
+                        startActivity(SettingsActivityIntent);
                         return true;
                     case R.id.menu_popularity:
                         Toast.makeText(MainActivity.this, "Popularity!", Toast.LENGTH_SHORT).show();
