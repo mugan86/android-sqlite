@@ -85,7 +85,7 @@ public class RaceAdapter
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(activity, "Action inside row!!!" + race.getRace_name(), Toast.LENGTH_LONG).show();
-                    ((MainActivity)activity).showFilterPopup(v);
+                    ((MainActivity)activity).showFilterPopup(v, race);
 
                 }
             });
