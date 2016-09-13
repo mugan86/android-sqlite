@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     // Display anchored popup menu based on view selected
-    public void showFilterPopup(View v) {
+    public void showFilterPopup(View v, final Race race) {
         PopupMenu popup = new PopupMenu(this, v);
         // Inflate the menu from xml
         popup.getMenuInflater().inflate(R.menu.popupmenu, popup.getMenu());
@@ -166,6 +166,8 @@ public class MainActivity extends AppCompatActivity{
                         return true;
                     case R.id.menu_popularity:
                         Toast.makeText(MainActivity.this, "Popularity!", Toast.LENGTH_SHORT).show();
+
+                        startActivity(Actions.sendHTML(race.getRace_code()));
                         return true;
                     default:
                         return false;
