@@ -171,6 +171,17 @@ public class Actions {
         return Intent.createChooser(intent, "Share");
     }
 
+    public static Intent sendHTML(String id)
+    {
+        Intent s = new Intent(android.content.Intent.ACTION_SEND);
+
+        s.setType("text/plain");
+        s.putExtra(Intent.EXTRA_SUBJECT, "SAmple");
+        s.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.amugika.servirace" +"/"+ id);
+        return Intent.createChooser(s, "Share");
+
+    }
+
     public static void shareImage(Context context, Bitmap bm) {
 
 
