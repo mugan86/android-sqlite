@@ -177,7 +177,7 @@ public class Actions {
 
         s.setType("text/plain");
         s.putExtra(Intent.EXTRA_SUBJECT, "SAmple");
-        s.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.amugika.servirace" +"/"+ id);
+        s.putExtra(Intent.EXTRA_TEXT, "http://www.mendiak.mugan86.com/#/"+ id);
         return Intent.createChooser(s, "Share");
 
     }
