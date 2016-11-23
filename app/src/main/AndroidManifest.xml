@@ -29,6 +29,10 @@
             android:label="Gallery"
             android:theme="@style/AppTheme"/>
 
+        <activity android:name=".StartWithLibraryActivity"
+            android:label="Start with library"
+            android:theme="@style/AppTheme"/>
+
         <activity
             android:exported="true"
             android:name=".ShareActivity"
