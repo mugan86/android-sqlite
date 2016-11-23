@@ -232,6 +232,11 @@ public class MainActivity extends AppCompatActivity{
             Intent GalleryIntent = new Intent(MainActivity.this, PlacesGalleryActivity.class);
             startActivity(GalleryIntent);
         }
+        else if (id == R.id.action_lib_activity)
+        {
+            Intent StartWithLibraryActivityIntent = new Intent(MainActivity.this, StartWithLibraryActivity.class);
+            startActivity(StartWithLibraryActivityIntent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
