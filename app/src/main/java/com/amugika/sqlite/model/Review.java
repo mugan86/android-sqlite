@@ -119,27 +119,27 @@ public class Review {
 
             if (val < 1.0)
             {
-                valorations_array[4][0] = 5 - i;
+                valorations_array[4][0] = 5 - (i);
                 valorations_array[4][1] = valorations_array[4][1] + 1;
             }
-            else if (val >= 1.0 && val < 2.0)
+            else if (val >= 1.0 && val <= 2.0)
             {
-                valorations_array[3][0] = 5 - i;
+                valorations_array[3][0] = 5 - (i);
                 valorations_array[3][1] = valorations_array[3][1] + 1;
             }
-            else if (val >= 2.0 && val < 3.0)
+            else if (val > 2.0 && val <= 3.0)
             {
-                valorations_array[2][0] = 5 - i;
+                valorations_array[2][0] = 5 - (i);
                 valorations_array[2][1] = valorations_array[2][1] + 1;
             }
-            else if (val >= 3.0 && val < 4.0)
+            else if (val > 3.0 && val <= 4.0)
             {
-                valorations_array[1][0] = 5 - i;
+                valorations_array[1][0] = 5 - (i);
                 valorations_array[1][1] = valorations_array[1][1] + 1;
             }
-            else if (val >= 4.0)
+            else if (val > 4.0)
             {
-                valorations_array[0][0] = 5 - i ;
+                valorations_array[0][0] = 5 - (i) ;
                 valorations_array[0][1] = valorations_array[0][1] + 1;
             }
         }
